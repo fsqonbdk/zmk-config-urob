@@ -1,0 +1,21 @@
+/* source key position labels */
+#include "zmk-helpers/key-labels/36.h"
+
+/* map Corne's extra thumb keys */
+#define X_LH  &smart_mouse  // thumb row, left
+#define X_RH  &bs_del       // thumb row, right
+
+/* This sets the value for these extra thumb keys across all layers. 
+If you want these buttons to vary by layer, you could either edit 
+base_keymap.conf directly or create a separate variable for each 
+layer, such as #define X_LH_BASE, X_LH_NUM and assign keypresses 
+here that would map per layer.*/
+
+/* activate bluetooth */
+#define CONFIG_WIRELESS
+
+/* source the main keymap */
+#include "base.keymap"
+
+/* use 5-column layout for Zen */
+ZMK_APPLY_MATRIX_TRANSFORM(five_column_transform)
