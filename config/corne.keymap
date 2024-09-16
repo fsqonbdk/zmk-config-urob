@@ -17,5 +17,8 @@ here that would map per layer.*/
 /* source the main keymap */
 #include "base.keymap"
 
+/* source the custom keymap */
+#include "custom.keymap"
+
 /* use 5-column layout for Zen */
 ZMK_APPLY_MATRIX_TRANSFORM(five_column_transform)
